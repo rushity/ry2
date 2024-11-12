@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Tracker</title>
+</head>
+<body>
+    <h1>Leave Tracker</h1>
+    <form action="/calculate" method="post">
+        <label for="total_leaves">Total No. of Leaves:</label>
+        <input type="number" id="total_leaves" name="total_leaves" required><br>
+
+        <label for="leaves_per_month">Total No. of Leaves per Month:</label>
+        <input type="number" id="leaves_per_month" name="leaves_per_month" required><br>
+
+        <label for="months">Number of Months:</label>
+        <input type="number" id="months" name="months" required><br>
+
+        <div id="monthly-leaves-inputs"></div>
+
+        <button type="button" onclick="addMonthlyLeaves()">Add Monthly Leaves</button><br>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <script>
+        function addMonthlyLeaves() {
+            const months = document.getElementById('months').value;
+            const container = document.getElementById('monthly-leaves-inputs');
+            container.innerHTML = '';
+
+            for (let i = 0; i < months; i++) {
+                container.innerHTML += `<label for="leaves_month_${i+1}">Leaves in Month ${i+1}:</label>
+                                        <input type="number" id="leaves_month_${i+1}" name="leaves_month_${i+1}" required><br>`;
+            }
+        }
+    </script>
+</body>
+</html>

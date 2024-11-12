@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Calculation Result</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Leave Calculation Result</h1>
+    <table border="1">
+        <tr>
+            <th>Month</th>
+            <th>Leaves Taken</th>
+            <th>Paid Leaves</th>
+            <th>Unpaid Leaves</th>
+            <th>Remaining Leaves</th>
+        </tr>
+        {% for row in table_data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Go Back</a>
+</body>
+</html>

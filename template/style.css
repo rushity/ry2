@@ -1,0 +1,97 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Added padding for small screens */
+}
+
+/* Form container styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+/* Input field styling */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Button colors */
+button[type="button"] {
+    background-color: #5bc0de;
+}
+
+button[type="submit"] {
+    background-color: #5cb85c;
+}
+
+/* Button hover effects */
+button[type="button"]:hover {
+    background-color: #46a2c6;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Further reduce padding on very small screens */
+    }
+
+    form {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input[type="number"] {
+        padding: 8px; /* Slightly reduce input padding */
+    }
+
+    button {
+        padding: 10px; /* Slightly reduce button padding */
+    }
+}
